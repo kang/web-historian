@@ -1,13 +1,14 @@
 var fs = require('fs');
 var path = require('path');
 
+
 /* You will need to reuse the same paths many times over in the course of this sprint.
   Consider calling this function in `request-handler.js` and passing in the necessary
   directories/files. This way, if you move any files, you'll only need to change your
   code in one place! Feel free to customize it in any way you wish.
 */
 
-exports.paths = {
+exports.paths = paths = {
   'siteAssets' : path.join(__dirname, '../web/public'),
   'archivedSites' : path.join(__dirname, '../archives/sites'),
   'list' : path.join(__dirname, '../archives/sites.txt')
@@ -27,15 +28,23 @@ exports.initialize = function(pathsObj){
 // modularize your code. Keep it clean!
 
 exports.readListOfUrls = function(){
+  var stuff;
+  fs.readFile(this.paths.list, "UTF-8 encoding", function(err, data){
+    // console.log(data);
+    stuff = data;
+    return stuff;
+  });
 };
 
 exports.isUrlInList = function(){
+  var data = readListOfUrls();
 };
 
 exports.addUrlToList = function(){
 };
 
 exports.isURLArchived = function(){
+  return true;
 };
 
 exports.downloadUrls = function(){

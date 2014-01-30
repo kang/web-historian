@@ -10,10 +10,14 @@ exports.headers = headers = {
   'Content-Type': "text/html"
 };
 
-exports.serveAssets = function(res, asset) {
+exports.serveHTML = function(url, response) {
+  // response.writeHead(200, headers);
   // Write some code here that helps serve up your static files!
   // (Static files are things like html (yours or archived from others...), css, or anything that doesn't change often.)
 };
 
-// As you progress, keep thinking about what helper functions you can put here!
+exports.serveWaitPage = function(response) {
+  response.writeHead(200, headers);
+};
 
+// As you progress, keep thinking about what helper functions you can put here!
