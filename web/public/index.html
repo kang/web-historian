@@ -4,8 +4,11 @@
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <script src='http://code.jquery.com/jquery-2.1.0.min.js' type="text/javascript"></script>
   <script>
-    var sendRequest = function(node){
-      var targetUrl = node.childNodes[1].value;
+
+    var sendRequest = function(DOM_Node){
+
+      var targetUrl = DOM_Node.childNodes[1].value;
+
       $.ajax ({
         url: 'http://127.0.0.1:8080',
         data: JSON.stringify(targetUrl),
@@ -13,7 +16,9 @@
         success: function(data){console.log('ajax success')},
         error: function(data){console.log('ajax error')}
       });
+
     };
+
   </script>
 </head>
 <body>

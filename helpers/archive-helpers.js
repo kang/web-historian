@@ -36,14 +36,14 @@ exports.readListOfUrls = function(){
   });
 };
 
-exports.isUrlInList = function(){
+exports.isUrlInList = function(url){
   var data = readListOfUrls();
 };
 
-exports.addUrlToList = function(){
+exports.addUrlToList = function(url){
 };
 
-exports.isURLArchived = function(){
+exports.isUrlArchived = function(url){
   return true;
 };
 
